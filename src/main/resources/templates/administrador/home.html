@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +19,7 @@
 <body style="background-color: #d5f5e3;">
 	<style>
 		.carousel-caption {
-			background: rgb(0, 0, 0,0.4);
+			background: rgb(0, 0, 0, 0.4);
 			/* Fondo negro con 50% de transparencia */
 			position: absolute;
 			top: 50%;
@@ -36,13 +37,12 @@
 		.carousel-caption p {
 			margin: 0;
 			color: rgb(255, 255, 255);
-			
+
 		}
-		
 	</style>
 
 	<!-- Navigation -->
-	
+
 	<div th:include="administrador/template_admin.html::header">
 	</div>
 	<br>
@@ -82,10 +82,14 @@
 			</a>
 		</div>
 		<br>
-		
-		
+
+
 
 		<!-- Page Features -->
+		<hr>
+		<h4 style="text-align: center; font-weight: bold; color: rgb(0, 0, 0,0.9); text-shadow: 4px -7px 2px rgba(0,0,0,0.6);
+		  font-size: 50px;">Farmacos Disponibles</h4>
+		<br>
 		<div class="row text-center">
 
 			<div class="col-lg-3 col-md-6 mb-4" th:each="p:${productos}">
@@ -99,11 +103,12 @@
 						<a th:href="@{productos/edit/{id} (id=${p.id})}" class="btn btn-success">Ver producto</a>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
 		<!-- /.row -->
-
+		<hr>
 	</div>
 	<!-- /.container -->
 
