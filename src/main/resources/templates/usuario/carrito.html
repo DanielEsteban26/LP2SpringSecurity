@@ -22,12 +22,12 @@
 <body style="background-color: #d5f5e3;">
 
 	<!-- Navigation -->
-	 <div th:include="usuario/template_usuario.html::header" th:if="${session==null}">
-	 
-    </div>
-    <div th:include="usuario/template_usuario.html::header-user" th:unless="${session==null}">
-	 
-    </div>
+	<div th:include="usuario/template_usuario.html::header" th:if="${session==null}">
+
+	</div>
+	<div th:include="usuario/template_usuario.html::header-user" th:unless="${session==null}">
+
+	</div>
 
 
 	<!-- Page Content -->
@@ -65,7 +65,8 @@
 									<td th:text="${o.precio}">Precio</td>
 									<td th:text="${o.cantidad}">Cantidad</td>
 									<td th:text="${o.total}">Total</td>
-									<td><a th:href="@{/delete/carrito/{id} (id=${o.producto.id})}" class="btn btn-danger">Quitar</a></td>
+									<td><a th:href="@{/delete/carrito/{id} (id=${o.producto.id})}"
+											class="btn btn-danger">Quitar</a></td>
 								</tr>
 							</tbody>
 						</table>

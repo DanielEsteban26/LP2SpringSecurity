@@ -87,10 +87,10 @@
 
 
 	</div>
-	
+
 	<div th:fragment="producto-login">
 		<div class="row text-center">
-                       
+
 			<div class="col-lg-3 col-md-6 mb-4" th:each="p:${productos}">
 				<div class="card h-100">
 					<img class="card-img-top" th:src="@{/images/{img} (img=${p.imagen})}" width="200px" height="200px"
@@ -105,41 +105,41 @@
 		</div>
 	</div>
 
-		<div th:fragment="producto-user">
-			<div class="row text-center">
+	<div th:fragment="producto-user">
+		<div class="row text-center">
 
-				<div class="col-lg-3 col-md-6 mb-4" th:each="p:${productos}">
-					<div class="card h-100">
-						<img class="card-img-top" th:src="@{/images/{img} (img=${p.imagen})}" width="200px"
-							height="200px" alt="">
-						<div class="card-body">
-							<p class="card-text" th:text="${p.nombre}"></p>
-						</div>
-						<div class="card-footer">
-							<a th:href="@{/productohome/{id} (id=${p.id})}" class="btn btn-success">Ver Farmaco</a>
-						</div>
+			<div class="col-lg-3 col-md-6 mb-4" th:each="p:${productos}">
+				<div class="card h-100">
+					<img class="card-img-top" th:src="@{/images/{img} (img=${p.imagen})}" width="200px" height="200px"
+						alt="">
+					<div class="card-body">
+						<p class="card-text" th:text="${p.nombre}"></p>
+					</div>
+					<div class="card-footer">
+						<a th:href="@{/productohome/{id} (id=${p.id})}" class="btn btn-success">Ver Farmaco</a>
 					</div>
 				</div>
-
 			</div>
+
 		</div>
+	</div>
 
-			<!-- Footer -->
-			<div th:fragment="footer">
-				<footer class="py-5 bg-secondary">
-					<div class="container">
-						<p class="m-0 text-center text-white">Copyright &copy; Proyecto Farmacia LPII 2023</p>
-					</div>
-					<!-- /.container -->
-				</footer>
-
+	<!-- Footer -->
+	<div th:fragment="footer">
+		<footer class="py-5 bg-secondary">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; Proyecto Farmacia LPII 2023</p>
 			</div>
+			<!-- /.container -->
+		</footer>
+
+	</div>
 
 
 
-			<!-- Bootstrap core JavaScript -->
-			<script th:src="@{vendor/jquery/jquery.min.js}"></script>
-			<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script th:src="@{vendor/jquery/jquery.min.js}"></script>
+	<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
 </body>
 

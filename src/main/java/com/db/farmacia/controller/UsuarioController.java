@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.db.farmacia.model.DetalleOrden;
 import com.db.farmacia.model.Orden;
 import com.db.farmacia.model.Usuario;
 import com.db.farmacia.service.IOrdenService;
@@ -97,6 +98,8 @@ public class UsuarioController {
 	public String detalleCompra(@PathVariable Integer id,HttpSession session,Model model) {
 		logger.info("id de la orden :  {}",id);
 		Optional<Orden> orden= ordenservice.FindById(id);
+		
+		List<DetalleOrden> detalleOrden= null;
 		
 		model.addAttribute("detalles", orden.get().getDetalle());
 		

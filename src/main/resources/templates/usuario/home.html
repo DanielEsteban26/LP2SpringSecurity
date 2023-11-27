@@ -52,7 +52,7 @@
 	<div th:include="usuario/template_usuario.html::header-user" th:unless="${sesion==null}">
 
 	</div>
-<br>
+	<br>
 	<!-- Page Content -->
 	<div class="container">
 		<!-- Carrusel -->
@@ -92,21 +92,19 @@
 		<hr>
 		<h4 style="text-align: center; font-weight: bold; color: rgb(0, 0, 0,0.9); text-shadow: 4px -7px 2px rgba(0,0,0,0.6);
 		  font-size: 50px;">Farmacos Disponibles</h4>
-		  <br>
+		<br>
 
-         <div th:include="usuario/template_usuario.html::producto-login" th:if="${sesion==null}"
-         ></div>
-         
-         <div th:include="usuario/template_usuario.html::producto-user" th:unless="${sesion==null}"
-         ></div>
+		<div th:include="usuario/template_usuario.html::producto-login" th:if="${sesion==null}"></div>
+
+		<div th:include="usuario/template_usuario.html::producto-user" th:unless="${sesion==null}"></div>
 
 
-<hr>
-		</div>
-		<!-- /.row -->
- 
+		<hr>
 	</div>
-	
+	<!-- /.row -->
+
+	</div>
+
 	<!-- /.container -->
 
 	<!-- Footer -->
