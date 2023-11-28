@@ -1,15 +1,12 @@
 package com.db.farmacia.util;
 
 import java.awt.Color;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Phaser;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.document.AbstractPdfView;
 
@@ -36,6 +33,7 @@ public class ListarProductos extends AbstractPdfView {
 		 * model.addAttribute("productos", productos); return "administrador/home";
 		 */
 
+		@SuppressWarnings("unchecked")
 		List<Producto> productos = (List<Producto>) model.get("productos");
 
 		Font fuenteTitulo = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 15, Color.WHITE);

@@ -33,6 +33,7 @@ public class ListarCompras extends AbstractPdfView{
 		
 		
 		
+		@SuppressWarnings("unchecked")
 		List<DetalleOrden> detalleOrden= (List<DetalleOrden>) model.get("detalles");
 		
 		Font fuenteTitulo = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 15, Color.WHITE);
@@ -61,21 +62,14 @@ public class ListarCompras extends AbstractPdfView{
 		PdfPTable tablaCompras = new PdfPTable(4);
 		tablaCompras.setWidths(new float[] { 2f, 3f, 2f, 2f });
 
-		celda = new PdfPCell(new Phrase("NOMBRE", fuentetituloColumnas));
+		celda = new PdfPCell(new Phrase("CANTIDAD", fuentetituloColumnas));
 		celda.setBackgroundColor(Color.RED);
 		celda.setHorizontalAlignment(Element.ALIGN_CENTER);
 		celda.setVerticalAlignment(Element.ALIGN_CENTER);
 		celda.setPadding(10);
 		tablaCompras.addCell(celda);
 
-		celda = new PdfPCell(new Phrase("DESCRIPCION", fuentetituloColumnas));
-		celda.setBackgroundColor(Color.RED);
-		celda.setHorizontalAlignment(Element.ALIGN_CENTER);
-		celda.setVerticalAlignment(Element.ALIGN_CENTER);
-		celda.setPadding(10);
-		tablaCompras.addCell(celda);
-
-		celda = new PdfPCell(new Phrase("INVENTARIO", fuentetituloColumnas));
+		celda = new PdfPCell(new Phrase("PRODUCTO", fuentetituloColumnas));
 		celda.setBackgroundColor(Color.RED);
 		celda.setHorizontalAlignment(Element.ALIGN_CENTER);
 		celda.setVerticalAlignment(Element.ALIGN_CENTER);
@@ -83,6 +77,13 @@ public class ListarCompras extends AbstractPdfView{
 		tablaCompras.addCell(celda);
 
 		celda = new PdfPCell(new Phrase("PRECIO", fuentetituloColumnas));
+		celda.setBackgroundColor(Color.RED);
+		celda.setHorizontalAlignment(Element.ALIGN_CENTER);
+		celda.setVerticalAlignment(Element.ALIGN_CENTER);
+		celda.setPadding(10);
+		tablaCompras.addCell(celda);
+
+		celda = new PdfPCell(new Phrase("TOTAL", fuentetituloColumnas));
 		celda.setBackgroundColor(Color.RED);
 		celda.setHorizontalAlignment(Element.ALIGN_CENTER);
 		celda.setVerticalAlignment(Element.ALIGN_CENTER);

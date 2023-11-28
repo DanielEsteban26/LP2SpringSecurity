@@ -19,7 +19,7 @@
 
 </head>
 
-<body style="background-color: #d5f5e3;">
+<body style="background-color: #f2f1f0">
 
 	<!-- Navigation -->
 	<div th:include="administrador/template_admin.html::header">
@@ -41,7 +41,8 @@
 		</ol>
 
 		<a class="btn btn-primary" th:href="@{/productos/create}">Crear Farmaco</a>
-		<a class="btn btn-dark float-right" th:href="@{/productos(format=pdf)}">Exportar a PDF</a>
+		<a class="nav-link float-right btn btn-dark" th:href="@{/productos(format=pdf)}">Exportar a PDF
+		</a>
 		<br>
 		<br>
 

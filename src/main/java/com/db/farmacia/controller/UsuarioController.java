@@ -99,6 +99,7 @@ public class UsuarioController {
 		logger.info("id de la orden :  {}",id);
 		Optional<Orden> orden= ordenservice.FindById(id);
 		
+		@SuppressWarnings("unused")
 		List<DetalleOrden> detalleOrden= null;
 		
 		model.addAttribute("detalles", orden.get().getDetalle());
